@@ -10,5 +10,5 @@
 ![FLASK APP](/terminal.png)
 ![..](/flask_web.png)
 
-## Unit Tester for web app
+## Unit Tester for web app using **unittest** and **selenium**
 ![UNIT TESTER FOR WEB APP](/tester.png)
