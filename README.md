@@ -4,4 +4,5 @@
 ![RESULTS OF TASK 1](/Screenshot_from_2024-06-17_23-55-46.png)
 
 
-## TASK 2 is in progress
+## here is my solution results for TASK 2
+
