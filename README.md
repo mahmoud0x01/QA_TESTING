@@ -8,7 +8,7 @@
 
 ## Flask APP
 ![FLASK APP](/terminal.png)
-![](/flask_web)
+![..](/flask_web)
 
 ## Unit Tester for web app
 ![UNIT TESTER FOR WEB APP](/tester.png)
