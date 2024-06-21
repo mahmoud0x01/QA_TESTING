@@ -49,5 +49,17 @@ class TestLongestConsecutiveSequence(unittest.TestCase):
     def test_negative_numbers(self):
         self.assertEqual(self.solution.longestConsecutive([-1, -2, -3, -4, 0, 1, 2, 3, 4]), 9)
 
+    def test_all_elements_same(self):
+        self.assertEqual(self.solution.longestConsecutive([5, 5, 5, 5, 5]), 1)
+
+    def test_large_range(self):
+        self.assertEqual(self.solution.longestConsecutive([-50, -49, 50, 51, 52, 53, 54, 55, -48, -47, 0, 1, 2, 3]), 9)
+
+    def test_gaps_in_sequence(self):
+        self.assertEqual(self.solution.longestConsecutive([10, 1, 3, 5, 2, 4, 6, 100, 101, 102, 103, 104]), 6)
+
+    def test_large_input(self):
+        self.assertEqual(self.solution.longestConsecutive(list(range(1000000))), 1000000)
+
 if __name__ == '__main__':
     unittest.main()
