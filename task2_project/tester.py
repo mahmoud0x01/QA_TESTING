@@ -46,6 +46,24 @@ class TestLongestConsecutiveSequence(unittest.TestCase):
     def test_unsorted_list(self):
         self.assertEqual(self.solution.longestConsecutive([10, 5, 12, 3, 55, 7, 6, 8, 4, 11]), 6)
 
+    def test_all_negative_numbers(self):
+        self.assertEqual(self.solution.longestConsecutive([-10, -9, -8, -7, -6]), 5)
+
+    def test_single_negative_number(self):
+        self.assertEqual(self.solution.longestConsecutive([-1]), 1)
+
+    def test_large_negative_to_positive_range(self):
+        self.assertEqual(self.solution.longestConsecutive(list(range(-1000, 1001))), 2001)
+
+    def test_mixture_of_positive_negative_and_zero(self):
+        self.assertEqual(self.solution.longestConsecutive([-1, 0, 1, 2, -2, -3, 3, 4, 5]), 9)
+
+    def test_already_sorted_list(self):
+        self.assertEqual(self.solution.longestConsecutive([1, 2, 3, 4, 5]), 5)
+
+    def test_random_order_elements(self):
+        self.assertEqual(self.solution.longestConsecutive([10, 6, 2, 3, 5, 8, 9, 1, 4, 7]), 10)
+
 class TestFlaskApp(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
