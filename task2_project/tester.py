@@ -31,8 +31,17 @@ class TestLongestConsecutiveSequence(unittest.TestCase):
         self.assertEqual(self.solution.longestConsecutive([-1, -2, -3, -4, 0, 1, 2, 3, 4]), 9)
 
     # New tests
+    def test_all_elements_same(self):
+        self.assertEqual(self.solution.longestConsecutive([5, 5, 5, 5, 5]), 1)
+
     def test_large_range(self):
-        self.assertEqual(self.solution.longestConsecutive(list(range(1, 10001))), 10000)
+        self.assertEqual(self.solution.longestConsecutive(list(range(-50, 51))), 101)
+
+    def test_gaps_in_sequence(self):
+        self.assertEqual(self.solution.longestConsecutive([10, 1, 3, 5, 2, 4, 6, 100, 101, 102, 103, 104]), 6)
+
+    def test_large_input(self):
+        self.assertEqual(self.solution.longestConsecutive(list(range(1000000))), 1000000)
 
     def test_unsorted_list(self):
         self.assertEqual(self.solution.longestConsecutive([10, 5, 12, 3, 55, 7, 6, 8, 4, 11]), 6)
